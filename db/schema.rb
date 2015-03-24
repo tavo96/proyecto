@@ -11,7 +11,39 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150217235304) do
+ActiveRecord::Schema.define(version: 20150316150229) do
+
+  create_table "reserves", force: true do |t|
+    t.string   "nombre"
+    t.integer  "cuenta"
+    t.time     "hora"
+    t.date     "fecha"
+    t.integer  "personas"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "starts", force: true do |t|
+    t.string   "nombre"
+    t.integer  "cuenta"
+    t.time     "hora"
+    t.date     "fecha"
+    t.integer  "personas"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "tabletimes", force: true do |t|
+    t.string   "hora"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "timetables", force: true do |t|
+    t.string   "nombre"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email"

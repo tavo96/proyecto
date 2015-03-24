@@ -1,4 +1,10 @@
 Proyecto::Application.routes.draw do
+  resources :timetables
+
+  resources :tabletimes
+
+  resources :starts
+
   get "sessions/new"
   get "users/new"
 
